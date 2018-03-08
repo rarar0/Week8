@@ -38,6 +38,7 @@ cat ~/Chapter8/${SYS}.txt | less
 echo "A blank file will be created, mounted, and filled with the hacker's manifesto"
 mkdir -p ~/Chapter8/testMount/test
 touch ~/Chapter8/testMount/1337.img
+chmod a +rwx ~/Chapter8/testMount/1337.img
 echo "Created ~/Chapter8/testMount/test"
 #Using DD to make a blank image (Currently errors out)
 dd if=/dev/zero of=~/Chapter8/testMount/1337.img bs=1M count=4
