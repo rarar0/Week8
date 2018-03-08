@@ -41,7 +41,7 @@ cd ~/Chapter8/testMount
 touch ~/Chapter8/testMount/leet.img
 echo "Created ~/Chapter8/testMount/test"
 #Using DD to make a blank image (Currently errors out)
-dd if=/dev/zero of=~/Chapter8/testMount/leet.img bs=1M count=4
+sudo dd if=/dev/zero of=~/Chapter8/testMount/leet.img bs=1M count=4
 mkfs -t ext4 ~/Chapter8/testMount/leet.img
 
 #Mount the image to /testMount/Test
