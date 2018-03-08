@@ -59,6 +59,8 @@ cat ~/Chapter8/testMount/test/MANIFESTO.txt | grep "us" | less
 #Hexdumping our image
 hexdump -C ~/Chapter8/testMount/leet.img | less
 
-
 cd ~
 clear
+echo "Press enter to delete all this crap we made"
+read
+rm -rf ~/Chapter8
