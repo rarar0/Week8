@@ -37,7 +37,6 @@ cat ~/Chapter8/${SYS}.txt | less
 #
 echo "A blank file will be created, mounted, and filled with the hacker's manifesto"
 mkdir -p ~/Chapter8/testMount/test
-cd ~/Chapter8/testMount
 touch ~/Chapter8/testMount/1337.img
 echo "Created ~/Chapter8/testMount/test"
 #Using DD to make a blank image (Currently errors out)
@@ -50,7 +49,7 @@ sudo mount 1337.img ~/Chapter8/testMount/test
 
 #writes the hackers manifesto to our text file we created earlier, then copies to our mount point
 echo "We explore... and you call us criminals. We seek after knowledge... and you call us criminals. We exist without skin color, without nationality, without religious bias... and you call us criminals. You build atomic bombs, you wage wars, murder, cheat, and lie to us and try to make us believe it's for our own good, yet we're the criminals. Yes I am a criminal. My crime is that of curiosity. My crime is that of judging people by what they say and  think, not what they look like. My crime is that of outsmarting you, something that you will never forgive me. I am a hacker, and this is my manifesto. You may stop this individual, but you can't stop us all...after all, we're all alike." >> ~/Chapter8/${FILE_NAME}.txt
-sudo cp ~/Chapter8/${FILE_NAME}.txt ~/Chapter8/testMount/test/MANIFESTO.txt
+cp ~/Chapter8/${FILE_NAME}.txt ~/Chapter8/testMount/test/MANIFESTO.txt
 sudo umount ~/Chapter8/testMount/test
 
 #Using grep to find usage of the word "us" in MANIFESTO.txt (Prints the whole output because the text is all one line)
@@ -63,4 +62,4 @@ cd ~
 clear
 echo "Press enter to delete all this crap we made"
 read
-rm -rf ~/Chapter8
+sudo rm -rf ~/Chapter8
